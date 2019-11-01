@@ -47,15 +47,15 @@ bool i2cdetect::i2cIsPresent(uint8_t adress) {
   return false;
 }
 
-uint8_t* i2cdetect::i2cGetArray() {
+/*uint8_t* i2cdetect::i2cGetArray() {
   return i2c_adresses;
-}
+}*/
 
 uint8_t i2cdetect::i2cGetCount() {
   return i2c_maxCount;
 }
 
-String i2cdetect::i2cGetPrintOut() {
+String i2cdetect::i2cGetAddresses() {
   String ret="";
   char buff[10];
 

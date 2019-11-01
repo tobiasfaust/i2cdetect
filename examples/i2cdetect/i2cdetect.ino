@@ -11,7 +11,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   delay(1000);
-  String str = I2Cdetect->i2cGetPrintOut();
+  String str = I2Cdetect->i2cGetAddresses();
 
-  Serial.println(I2Cdetect->i2cGetPrintOut());
+  Serial.println(I2Cdetect->i2cGetAddresses());
 }

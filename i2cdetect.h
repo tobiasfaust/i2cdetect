@@ -7,7 +7,11 @@
   #include "WProgram.h"
 #endif
 
+#ifndef I2CDETECT_H
+#define I2CDETECT_H
+
 #include "Wire.h"
+#include <vector>
 
 class i2cdetect
 {
@@ -19,10 +23,12 @@ class i2cdetect
     void     i2cScan(uint8_t first, uint8_t last);
     void     i2cScan();
 
-    String   i2cGetPrintOut();
+    String   i2cGetAddresses();
+    void     i2cGetAddresses(std::vector<uint8_t>* i2cAddresses);
+    
     bool     i2cIsPresent(uint8_t adress);
     uint8_t  i2cGetCount();
-    uint8_t* i2cGetArray();
+    //void    i2cGetArray(std::vector<uint8_t>* i2cAddresses);
     
   private:
     uint8_t  pin_sda = 4;
@@ -30,4 +36,6 @@ class i2cdetect
 
     uint8_t  i2c_maxCount = 8;
     uint8_t  i2c_adresses[8] = {0};
+    // std::vector<uint8_t> i2cAddresses;
 };
+#endif
