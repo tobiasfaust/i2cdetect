@@ -31,8 +31,8 @@ class i2cdetect
     //void    i2cGetArray(std::vector<uint8_t>* i2cAddresses);
     
   private:
-    uint8_t  pin_sda = 4;
-    uint8_t  pin_scl = 0;
+    uint8_t  pin_sda = 5;
+    uint8_t  pin_scl = 4;
 
     uint8_t  i2c_maxCount = 8;
     uint8_t  i2c_adresses[8] = {0};
